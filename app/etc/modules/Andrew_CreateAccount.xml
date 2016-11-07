@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Andrew_CreateAccount>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Andrew_CreateAccount>
+    </modules>
+</config>

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Andrew_CreateAccount>
+            <version>0.0.1</version>
+        </Andrew_CreateAccount>
+    </modules>
+    <global>
+        <models>
+            <andrew_createaccount>
+                <class>Andrew_CreateAccount_Model</class>
+            </andrew_createaccount>
+        </models>
+        <helpers>
+            <andrew_createaccount>
+                <class>Andrew_CreateAccount_Helper</class>
+            </andrew_createaccount>
+        </helpers>
+        <blocks>
+            <andrew_createaccount>
+                <class>Andrew_CreateAccount_Block</class>
+            </andrew_createaccount>
+            <adminhtml>
+                <rewrite>
+                    <sales_order_view>Andrew_CreateAccount_Block_Adminhtml_Sales_Order_View</sales_order_view>
+                </rewrite>
+            </adminhtml>
+        </blocks>
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <andrew_createaccount after="Mage_Adminhtml">Andrew_CreateAccount</andrew_createaccount>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <translate>
+            <modules>
+                <Andrew_CreateAccount>
+                    <files>
+                        <default>Andrew_CreateAccount.csv</default>
+                    </files>
+                </Andrew_CreateAccount>
+            </modules>
+        </translate>
+    </adminhtml>
+</config>
