@@ -22,22 +22,20 @@ class Andrew_CreateAccount_Helper_Data extends Mage_Core_Helper_Abstract
     /**
      * Send email ?
      *
-     * @param   Mage_Core_Controller_Request_Http $request
      * @return  bool
      */
-    public function doSendEmail($request)
+    public function doSendEmail()
     {
-       return (bool)$request->getParam('send_email');
+       return (bool)$this->_getRequest()->getParam('send_email');
     }
 
     /**
      * Do reassign other orders?
      *
-     * @param   Mage_Core_Controller_Request_Http $request
      * @return  bool
      */
-    public function doReassignOtherOrders($request)
+    public function doReassignOtherOrders()
     {
-        return (bool)$request->getParam('reassign_other_orders');
+        return (bool)$this->_getRequest()->getParam('reassign_other_orders');
     }
 }

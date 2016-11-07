@@ -84,14 +84,14 @@ class Andrew_CreateAccount_CreateaccountController extends Mage_Adminhtml_Contro
                 ->save();
 
             /* Sending notification email to customer */
-            if ($this->_helper->doSendEmail($this->getRequest())) {
+            if ($this->_helper->doSendEmail()) {
                 $this->_customer->sendNewAccountEmail('registered', '', $this->_order->getSoreId());
             }
 
             $this->_saveOrderProcess($this->_order);
 
             /* Reassign Other orders except base order */
-            if ($this->_helper->doReassignOtherOrders($this->getRequest())) {
+            if ($this->_helper->doReassignOtherOrders()) {
                 $this->_reassignOtherOrders();
             }
         }
