@@ -5,6 +5,7 @@
         <Andrew_CreateAccount>
             <active>true</active>
             <codePool>community</codePool>
+            <depends>Mage_Adminhtml</depends>
         </Andrew_CreateAccount>
     </modules>
 </config>
